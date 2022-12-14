@@ -1,0 +1,54 @@
+﻿@page
+@model ProjetoMusica.Pages.Musicas.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Musica</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Musica.Title" class="control-label"></label>
+                <input asp-for="Musica.Title" class="form-control" />
+                <span asp-validation-for="Musica.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Musica.Singer" class="control-label"></label>
+                <input asp-for="Musica.Singer" class="form-control" />
+                <span asp-validation-for="Musica.Singer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Musica.Album" class="control-label"></label>
+                <input asp-for="Musica.Album" class="form-control" />
+                <span asp-validation-for="Musica.Album" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Musica.Wheretofind" class="control-label"></label>
+                <input asp-for="Musica.Wheretofind" class="form-control" />
+                <span asp-validation-for="Musica.Wheretofind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Musica.Rate" class="control-label"></label>
+                <input asp-for="Musica.Rate" class="form-control" />
+                <span asp-validation-for="Musica.Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
